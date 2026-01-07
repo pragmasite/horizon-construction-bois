@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 210 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 20%;
+
+    --primary: 210 25% 30%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 30 60% 60%;
+    --secondary-foreground: 210 15% 20%;
+
+    --muted: 210 15% 88%;
+    --muted-foreground: 210 10% 50%;
+
+    --accent: 30 70% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 210 25% 30%;
+
+    --radius: 0.75rem;
+
+    --shadow-soft: 0 4px 20px -4px hsl(210 25% 30% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(210 25% 30% / 0.15);
+
+    --sidebar-background: 210 15% 95%;
+    --sidebar-foreground: 210 15% 20%;
+    --sidebar-primary: 210 25% 30%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 30 60% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 15% 88%;
+    --sidebar-ring: 210 25% 30%;
+  }
+
+  .dark {
+    --background: 210 15% 12%;
+    --foreground: 210 15% 92%;
+    --card: 210 15% 16%;
+    --card-foreground: 210 15% 92%;
+    --popover: 210 15% 16%;
+    --popover-foreground: 210 15% 92%;
+    --primary: 210 15% 92%;
+    --primary-foreground: 210 25% 30%;
+    --secondary: 30 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 10% 35%;
+    --muted-foreground: 210 15% 70%;
+    --accent: 30 75% 55%;
+    --accent-foreground: 210 15% 12%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 10% 25%;
+    --input: 210 10% 25%;
+    --ring: 210 15% 92%;
+    --sidebar-background: 210 15% 10%;
+    --sidebar-foreground: 210 15% 92%;
+    --sidebar-primary: 210 15% 92%;
+    --sidebar-primary-foreground: 210 25% 30%;
+    --sidebar-accent: 30 75% 55%;
+    --sidebar-accent-foreground: 210 15% 12%;
+    --sidebar-border: 210 10% 25%;
+    --sidebar-ring: 210 15% 92%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
